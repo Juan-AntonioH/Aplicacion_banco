@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" prefHeight="600.0" prefWidth="575.0" spacing="20.0" styleClass="fondo" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.banco.proyectobanco.PrimaryController">
+   <children>
+      <Pane prefHeight="508.0" prefWidth="660.0">
+         <children>
+            <Button fx:id="ingresarCuenta" layoutX="171.0" layoutY="337.0" onAction="#switchToSecondary" prefHeight="30.0" prefWidth="196.0" styleClass="botones1" stylesheets="@estilos.css" text="Acceder al Banco SanJuan" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="286.0" fitWidth="429.0" layoutX="52.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Imagenes/fondo.jpg" />
+               </image>
+            </ImageView>
+            <Text fill="#468faf" layoutX="27.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Con la app de Banco SanJuan, puedes operar con todos tus bancos,realizar y controlar de un vistazo ingresos, gastos, domiciliar nóminas y autorizar personas. Incluso sacar buena nota en programación! Además notificamos cada movimiento al momento." textAlignment="CENTER" wrappingWidth="479.0" />
+            <Separator layoutX="27.0" layoutY="411.0" prefHeight="0.0" prefWidth="479.0" />
+            <Separator layoutX="27.0" layoutY="490.0" prefHeight="0.0" prefWidth="479.0" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="461.0" layoutY="14.0">
+               <image>
+                  <Image url="@Imagenes/Logo2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Text fill="#468faf" strokeType="OUTSIDE" strokeWidth="0.0" text="Banco SanJuan 2022 Copyright© Todos los derechos reservados." textAlignment="CENTER" wrappingWidth="479.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

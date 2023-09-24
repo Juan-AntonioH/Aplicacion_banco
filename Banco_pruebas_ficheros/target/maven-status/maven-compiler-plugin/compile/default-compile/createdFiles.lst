@@ -1,0 +1,7 @@
+com\banco\proyectobanco\SecondaryController.class
+com\banco\proyectobanco\Modelo\CuentaBancaria.class
+com\banco\proyectobanco\Modelo\Persona.class
+com\banco\proyectobanco\Modelo\Recibo.class
+com\banco\proyectobanco\Modelo\Banco.class
+com\banco\proyectobanco\PrimaryController.class
+com\banco\proyectobanco\App.class

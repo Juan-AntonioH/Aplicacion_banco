@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="600.0" prefWidth="590.0" styleClass="fondo" stylesheets="@estilos.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.banco.proyectobanco.SecondaryController">
+   <children>
+      <Label fx:id="saldoCuenta" layoutX="242.0" layoutY="43.0" prefHeight="23.0" prefWidth="113.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="titularCuenta" layoutX="242.0" layoutY="12.0" prefHeight="23.0" prefWidth="231.0" />
+      <Text layoutX="191.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALDO:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <Text layoutX="182.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TITULAR:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Text>
+      <TabPane fx:id="tabpane" layoutX="157.0" layoutY="80.0" prefHeight="520.0" prefWidth="455.0" stylesheets="@estilos.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="textCuentas" text="Cuentas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botonVerCuentas" layoutX="30.0" layoutY="203.0" mnemonicParsing="false" onMouseClicked="#alPulsarVerCuentas" prefHeight="26.0" prefWidth="367.0" styleClass="botones1" stylesheets="@estilos.css" text="Ver Cuentas" textFill="WHITE" />
+                        <Button fx:id="botonCrearcuenta" layoutX="30.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#alPulsarCrearCuenta" prefHeight="26.0" prefWidth="367.0" styleClass="botones1" stylesheets="@estilos.css" text="Crear cuenta" textFill="WHITE" />
+                        <Button fx:id="botonAccederCuenta" layoutX="30.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#alPulsarIngresarCuenta" prefHeight="26.0" prefWidth="370.0" styleClass="botones1" stylesheets="@estilos.css" text="Ingresar" textFill="WHITE" />
+                        <Button fx:id="botonSalirCuenta" layoutX="305.0" layoutY="428.0" mnemonicParsing="false" onMouseClicked="#alPulsarSalir" prefHeight="26.0" prefWidth="96.0" styleClass="botones1" stylesheets="@estilos.css" text="Salir" textFill="WHITE" />
+                        <TextField fx:id="textFieldNombreTitular" layoutX="133.0" layoutY="67.0" prefHeight="26.0" prefWidth="263.0" promptText="ej. Tinky Winky" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <TextField fx:id="textFieldDniTitular" layoutX="133.0" layoutY="110.0" prefHeight="26.0" prefWidth="263.0" promptText="ej. 12345678A" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <TextField fx:id="textFieldNumeroCuenta" layoutX="30.0" layoutY="332.0" prefHeight="26.0" prefWidth="368.0" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <Text layoutX="28.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre Titular" />
+                        <Text layoutX="38.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI Titular" />
+                        <Text layoutX="70.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserte el número de cuenta con la que quiere acceder:" />
+                        <Separator layoutX="27.0" layoutY="49.0" prefHeight="2.0" prefWidth="370.0" />
+                        <Text fill="#013a63" layoutX="144.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GESTIONAR CUENTAS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="27.0" layoutY="20.0" prefHeight="2.0" prefWidth="370.0" />
+                        <Separator layoutX="31.0" layoutY="281.0" prefHeight="2.0" prefWidth="370.0" />
+                        <Text fill="#013a63" layoutX="148.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ACCEDER A CUENTAS" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="31.0" layoutY="252.0" prefHeight="2.0" prefWidth="370.0" />
+                        <Text fx:id="textoInformativoCuenta" layoutX="30.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Para acceder a otra cuenta, debe pulsar el botón &quot;Salir&quot;. Después, introducir un número de cuenta." wrappingWidth="282.20001220703125" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab id="textingresar" fx:id="pestañaIngresar" text="Ingresar">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Spinner fx:id="spinnerCantidadIngresar" editable="true" layoutX="40.0" layoutY="95.0" prefHeight="26.0" prefWidth="162.0" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <Button fx:id="botonIngresar" layoutX="40.0" layoutY="141.0" mnemonicParsing="false" onAction="#alPulsarIngreso" prefHeight="26.0" prefWidth="347.0" styleClass="botones1" stylesheets="@estilos.css" text="Confirmar ingreso" textFill="WHITE" />
+                        <TextArea fx:id="informacionIngreso" editable="false" layoutX="39.0" layoutY="254.0" prefHeight="187.0" prefWidth="350.0" promptText="Aquí se mostrará la información del ingreso." styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <Text layoutX="256.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motivo del ingreso" />
+                        <ChoiceBox fx:id="motivoIngreso" layoutX="224.0" layoutY="95.0" prefHeight="26.0" prefWidth="163.0" stylesheets="@estilos.css" />
+                        <Text layoutX="70.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad a ingresar" />
+                        <Text fill="#013a63" layoutX="124.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMACIÓN DEL INGRESO">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="27.0" layoutY="206.0" prefHeight="0.0" prefWidth="370.0" />
+                        <Separator layoutX="27.0" layoutY="235.0" prefHeight="0.0" prefWidth="370.0" />
+                        <Text fill="#013a63" layoutX="147.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DEL INGRESO" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="28.0" layoutY="20.0" prefHeight="0.0" prefWidth="370.0" />
+                        <Separator layoutX="28.0" layoutY="49.0" prefHeight="0.0" prefWidth="370.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="pestañaRetirar" text="Retirar">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="informacionRetiro" layoutX="37.0" layoutY="307.0" onDragDetected="#alPulsarRetiro" prefHeight="147.0" prefWidth="354.0" promptText="Aquí se mostrará la información de la operación." />
+                        <Text layoutX="71.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad a retirar" />
+                        <Spinner fx:id="spinnerCantidadRetirar" editable="true" layoutX="38.0" layoutY="93.0" prefHeight="26.0" prefWidth="162.0" />
+                        <Button fx:id="botonRetirar" layoutX="40.0" layoutY="215.0" mnemonicParsing="false" onMouseClicked="#alPulsarRetiro" prefHeight="26.0" prefWidth="351.0" stylesheets="@estilos.css" text="Confirmar retiro" textFill="WHITE">
+                           <styleClass>
+                              <String fx:value="botones" />
+                              <String fx:value="botones1" />
+                           </styleClass></Button>
+                        <Text layoutX="40.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total donaciones a ONGs:" />
+                        <ProgressBar fx:id="barraONG" layoutX="38.0" layoutY="158.0" prefHeight="31.0" prefWidth="200.0" progress="0.0" />
+                        <ChoiceBox fx:id="motivoRetiro" layoutX="225.0" layoutY="93.0" prefWidth="163.0" />
+                        <Text layoutX="262.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motivo del retiro" />
+                        <Label fx:id="cantidadDonacion" layoutX="188.0" layoutY="132.0" prefHeight="30.0" prefWidth="54.0" />
+                        <CheckBox fx:id="checkDonar" layoutX="262.0" layoutY="165.0" mnemonicParsing="false" text="Donar a ONGs" />
+                        <Text fill="#013a63" layoutX="126.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMACIÓN DE LA RETIRADA">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Text>
+                        <Separator layoutX="27.0" layoutY="263.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Separator layoutX="29.0" layoutY="292.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Text fill="#013a63" layoutX="141.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DE LA RETIRADA">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="28.0" layoutY="20.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Separator layoutX="30.0" layoutY="49.0" prefHeight="3.0" prefWidth="370.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="pestañaDomiciliar" text="Domiciliar">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="104.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CIF" />
+                        <Text layoutX="256.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre empresa" />
+                        <Text layoutX="91.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Importe" />
+                        <Text layoutX="276.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Concepto" />
+                        <Text layoutX="38.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Periocidad:" />
+                        <ListView fx:id="informacionRecibos" layoutX="37.0" layoutY="319.0" prefHeight="103.0" prefWidth="350.0" />
+                        <RadioButton fx:id="radioBotonAnual" layoutX="332.0" layoutY="196.0" mnemonicParsing="false" text="Anual">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="periocidades" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="radioBotonTrimestral" layoutX="226.0" layoutY="196.0" mnemonicParsing="false" text="Trimestral" toggleGroup="$periocidades" />
+                        <RadioButton fx:id="radioBotonMensual" layoutX="129.0" layoutY="196.0" mnemonicParsing="false" selected="true" text="Mensual" toggleGroup="$periocidades" />
+                        <Button fx:id="botonDomiciliarRecibo" layoutX="34.0" layoutY="232.0" mnemonicParsing="false" onMouseClicked="#alPulsarDomiciliarRecibo" prefHeight="26.0" prefWidth="353.0" styleClass="botones1" stylesheets="@estilos.css" text="Domiciliar recibo" textFill="WHITE" />
+                        <Spinner fx:id="spinnerCantidadRecibo" editable="true" layoutX="34.0" layoutY="147.0" prefHeight="26.0" prefWidth="162.0" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <TextField fx:id="textFieldCifEmpresa" layoutX="34.0" layoutY="88.0" prefHeight="26.0" prefWidth="162.0" promptText="ej. 123456" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <TextField fx:id="textFieldNombreEmpresa" layoutX="224.0" layoutY="88.0" prefHeight="26.0" prefWidth="160.0" promptText="ej. Spectre" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <TextField fx:id="textFieldConceptoRecibo" layoutX="224.0" layoutY="147.0" prefHeight="26.0" prefWidth="160.0" promptText="ej. Dominación Mundial" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <Button fx:id="botonFiltroPeriocidad" layoutX="38.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#alPulsarFiltraPeriocidad" prefHeight="26.0" prefWidth="350.0" styleClass="botones1" stylesheets="@estilos.css" text="Filtrar por periocidad" textFill="WHITE" />
+                        <Text fill="#013a63" layoutX="123.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DATOS DE LA DOMICILIACIÓN">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="28.0" layoutY="49.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Separator layoutX="28.0" layoutY="20.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Text fill="#013a63" layoutX="122.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMACIÓN DE LOS RECIBOS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="27.0" layoutY="306.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Separator layoutX="27.0" layoutY="277.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Button fx:id="botonExportarRecibos" layoutX="159.0" layoutY="458.0" mnemonicParsing="false" onMouseClicked="#alPulsarExportarRecibos" styleClass="botones1" stylesheets="@estilos.css" text="Exportar Recibos" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="pestañaAutorizados" text="Autorizados">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ProgressIndicator fx:id="quesitoAutorizados" layoutX="53.0" layoutY="379.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="68.0" prefWidth="87.0" progress="0.0" />
+                        <Text layoutX="32.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" />
+                        <ListView fx:id="informacionAutorizados" layoutX="30.0" layoutY="67.0" onMouseClicked="#seleccionarAutorizado" prefHeight="181.0" prefWidth="370.0" />
+                        <Button fx:id="botonAutorizar" layoutX="197.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#alPulsarAutorizarPersonas" prefHeight="26.0" prefWidth="202.0" styleClass="botones1" stylesheets="@estilos.css" text="Autorizar" textFill="WHITE" />
+                        <TextField fx:id="textFieldNombreAutorizado" layoutX="93.0" layoutY="265.0" prefHeight="26.0" prefWidth="306.0" promptText="ej. Peppa Pig" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <TextField fx:id="textFieldDniAutorizado" layoutX="93.0" layoutY="302.0" prefHeight="26.0" prefWidth="307.0" promptText="ej. 44444444D" styleClass="fondoRecuadro" stylesheets="@estilos.css" />
+                        <Text layoutX="54.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI" />
+                        <Button fx:id="botonDesautorizar" layoutX="197.0" layoutY="421.0" mnemonicParsing="false" onMouseClicked="#alPulsarDesautorizarPersonas" prefHeight="26.0" prefWidth="202.0" styleClass="botones1" stylesheets="@estilos.css" text="Desautorizar" textFill="WHITE" />
+                        <Label fx:id="labelNumeroDeAutorizados" layoutX="177.0" layoutY="350.0" prefHeight="18.0" prefWidth="25.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Text layoutX="31.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nº Personas Autorizadas:" textAlignment="CENTER" wrappingWidth="145.800018310547" />
+                        <Text fill="#013a63" layoutX="141.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PERSONAS AUTORIZADAS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="28.0" layoutY="49.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Separator layoutX="28.0" layoutY="20.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Button fx:id="botonImportar" layoutX="234.0" layoutY="346.0" mnemonicParsing="false" onMouseClicked="#alPulsarImportar" styleClass="botones1" stylesheets="@estilos.css" text="Importar autorizados" textFill="WHITE" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="pestañaMovimientos" text="Movimientos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="movimientos" layoutX="38.0" layoutY="75.0" prefHeight="386.0" prefWidth="351.0" promptText="Aquí se mostrarán todos los movimientos." />
+                        <Text fill="#013a63" layoutX="98.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TODOS LOS MOVIMIENTOS REALIZADOS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="28.0" layoutY="49.0" prefHeight="3.0" prefWidth="370.0" />
+                        <Separator layoutX="28.0" layoutY="20.0" prefHeight="3.0" prefWidth="370.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <ImageView fitHeight="652.0" fitWidth="185.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/baner2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="70.0" layoutX="508.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagenes/Logo2.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

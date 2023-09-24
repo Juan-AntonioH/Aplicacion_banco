@@ -1,0 +1,98 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 abr 2022, 16:43:59
+    Author     : Juan
+*/
+.dev-fx-body {
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-brackground-color:red;
+}
+
+.fondo{
+    -fx-background-color:#a9d6e5;
+}
+
+.fondoRecuadro{
+    -fx-background-color:#edf2fb;
+}
+
+.botones1{
+    -fx-background-color:#468faf;
+    /*-fx-effect: dropshadow(one-pass-box, black, 1, 0.0 ,2,1)*/
+}
+
+.botones1:hover{
+    -fx-background-color:#0096c7;
+    /*-fx-effect: dropshadow(one-pass-box, black, 1, 0.0 ,2,1)*/
+}
+
+.botones1:pressed{
+    -fx-background-color:#ffb703;
+    -fx-text-fill: black;
+    /*-fx-effect: dropshadow(one-pass-box, black, 1, 0.0 ,2,1)*/
+}
+
+.botones1:active{
+    -fx-text-fill: white;
+}
+
+.botones2{
+    -fx-background-color:#ffb703;
+}
+
+#tabpane {
+    -fx-text-fill: #FFFFFF;
+}
+
+
+.tab {
+    -fx-background-color: #468faf;
+    -fx-text-fill: #edf2fb;
+    -fx-font-size: 12px;
+    -fx-background-inserts: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-padding: 5 9 0 10;
+}
+
+.tab:selected {
+    -fx-background-color: #DDEDF4; 
+    -fx-border-color: #DDEDF4;
+    /*-fx-text-fill: white;*/
+    -fx-font-size: 12px;
+    -fx-background-inserts: 0.0;
+    -fx-background-radius: 0.0;
+    -fx-padding: 5 9 0 10;
+    -fx-text-base-color:#468faf;
+}
+
+
+.tab:hover{
+    -fx-background-color:#ffb703;
+}
+
+.tab-pane *.tab-header-background{
+    -fx-background-color: transparent;
+}
+
+
+
+.tab:selected .focus-indicator{
+    -fx-focus-color: transparent;
+}
+
+
+#movimientos,#informacionRetiro,#informacionIngreso,#informacionRecibos,#informacionAutorizados,#spinnerCantidadIngresar,#spinnerCantidadRetirar,#barraONG,#motivoRetiro,#spinnerCantidadRecibo,#quesitoAutorizados{
+    -fx-control-inner-background: #edf2fb;
+    /*    -fx-text-fill: black;
+        -fx-font-weight:bold;*/
+}
+
+.tab{
+    -fx-text-base-color:white;
+}
